@@ -1,0 +1,72 @@
+/* Responsividade para notebooks */
+@media (max-width: 1200px) {
+    .conteudo {
+        width: 92%;
+    }
+
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+
+
+    .card {
+        padding: 20px;
+    }
+
+
+    .banner-texto h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 0;
+    }
+
+
+    .banner-texto {
+        max-width: 80%;
+    }
+
+
+    .banner-texto h2 {
+        font-size: 26px;
+    }
+
+
+    .menu a {
+        margin: 0 10px;
+        font-size: 15px;
+    }
+}
+
+
+/* Responsividade para tablets menores */
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .menu a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 32px;
+    }
+
+
+    .banner-texto {
+        padding: 25px;
+    }
+}
+
