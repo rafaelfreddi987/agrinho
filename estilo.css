@@ -1,0 +1,259 @@
+/* Configuração geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove a rolagem manual da página */
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7ed;
+    color: #2f3e2f;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+/* Menu fixo */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 6%;
+    background-color: #1b5e20;
+    text-align: center;
+    padding: 25px;
+    z-index: 1000;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ffeb3b;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2e7d32, #8bc34a);
+    color: white;
+    text-align: center;
+    padding: 120px 20px 35px;
+}
+
+.cabecalho h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.cabecalho p {
+    font-size: 20px;
+}
+
+/* Banner principal */
+.banner {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 60, 20, 0.6), rgba(0, 60, 20, 0.6)),
+                url("https://images.unsplash.com/photo-1500382017468-9049fed747ef");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-texto {
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 35px;
+    border-radius: 15px;
+    max-width: 650px;
+    text-align: center;
+}
+
+.banner-texto h2 {
+    color: #2e7d32;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.banner-texto p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Botão */
+.botao {
+    display: inline-block;
+    background-color: #f9a825;
+    color: #2f2f2f;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #f57f17;
+    color: white;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Ajuste para links internos */
+section,
+header,
+footer {
+    scroll-margin-top: 70px;
+}
+
+/* Seção sobre o tema */
+.secao {
+    min-height: 100vh;
+    background-color: white;
+    padding: 120px 30px 30px;
+    border-left: 8px solid #4caf50;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.secao h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* Cards */
+.cards {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    border-top: 6px solid #8bc34a;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-top-color: #f9a825;
+}
+
+.icone {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+/* Área de destaque */
+.destaque {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #795548, #a1887f);
+    color: white;
+    text-align: center;
+    padding: 120px 35px 35px;
+    border-radius: 15px;
+}
+
+.destaque h2 {
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+.rodape {
+    min-height: 100vh;
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 120px 25px 25px;
+    margin-top: 40px;
+}
+
+/* Responsividade para notebooks */
+@media (max-width: 1200px) {
+    .conteudo {
+        width: 92%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .banner-texto h2 {
+        font-size: 28px;
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 0;
+    }
+
+    .banner-texto {
+        max-width: 80%;
+    }
+
+    .banner-texto h2 {
+        font-size: 26px;
+    }
+
+    .menu a {
+        margin: 0 10px;
+        font-size: 15px;
+    }
+}
+
+/* Responsividade para tablets menores */
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .menu a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .cabecalho h1 {
+        font-size: 32px;
+    }
+
+    .banner-texto {
+        padding: 25px;
+    }
+}
